@@ -1,0 +1,150 @@
+html {
+    scroll-behavior: smooth;   
+}
+
+body {
+    background-size: cover;
+    background-image: url('bgd.jpg');
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden; 
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+    display: none !important;
+}
+
+body, html {
+    -ms-overflow-style: none !important;  
+    scrollbar-width: none !important;  
+}
+
+.back {
+    display: flex;
+    align-items: center;
+}
+
+.back img {
+    margin-right: 10px;
+}
+
+.back {
+    font-family: "Bona Nova SC", serif; /*Кнопка назад на головну*/
+    background-color: #3130303f;
+    box-shadow: #313030 4px 4px 4px;
+    padding-bottom: 3%;
+    padding-right: 2%;
+    margin-top: 2%;
+    margin-right: 70%;
+    margin-left: 3%;
+    color: #313030;
+    font-size: 20px;
+}
+
+.back:hover {
+    background-color: rgba(49, 48, 48, 0.6); /* осветление фона при наведении */
+}
+
+.he {
+    font-family: "Bona Nova SC", serif; /*заголовок*/
+    text-align: center;
+    color: #313030;
+    font-size: 50px;
+    margin: 0;
+    padding: 20px 0;
+    text-shadow: #3d3d3d3a 4px 4px 4px;
+}
+
+.ksu, .mir, .and { /*всі контейнери з інфой*/
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin: 0 auto; 
+    padding: 20px 0;
+    width: 60%; 
+    box-sizing: border-box; 
+    box-shadow: #313030 4px 4px 4px;
+    font-size: larger;
+}
+
+.ksu {
+    background-color: #3130303f;
+    border-radius: 10px;
+    padding-left: 7%;
+    padding-bottom: 3%;
+    margin-top: 4%;
+    margin-bottom: 6%;
+}
+
+.mir {
+    background-color: #3130303f;
+    border-radius: 10px;
+    padding-right: 7%;
+    padding-bottom: 3%;
+    padding-left: 4px;
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+.and {
+    background-color: #3130303f;
+    border-radius: 10px;
+    padding-left: 7%;
+    padding-bottom: 3%;
+    margin-top: 6%;
+    margin-bottom: 12%;
+}
+
+.line { /*чорне ото нечто полосате*/
+    width: 100vw; 
+    height: 240px; 
+    background-color: #000000e9; 
+    margin: 0; 
+}
+
+.ksu img, .and img {
+    margin-right: 20px;
+}
+
+.mir img {
+    margin-left: 20px;
+}
+
+.ksu img, .mir img, .and img {
+    width: 200px;
+    height: auto;
+}
+
+.ksu p, .mir p, .and p { /**/
+    flex: 1;
+}
+
+.to-top { /*кнопка на гору*/
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    animation: swing 2s infinite;
+}
+
+.to-top img {
+    margin-bottom: 5%;
+    margin-right: 5%;
+    width: 150%;
+    height: auto;
+}
+
+@keyframes swing { /*анімація кнопки*/
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}

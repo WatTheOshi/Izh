@@ -1,0 +1,146 @@
+html {
+    scroll-behavior: smooth; 
+} 
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+    display: none !important;
+}
+
+body, html {
+    -ms-overflow-style: none !important;  
+    scrollbar-width: none !important;  
+}
+
+body {
+    background: linear-gradient(to right, #e0f7fa, #ffffff, #e0f7fa);
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+}
+
+.back img {
+    margin-right: 10px;
+}
+
+.back {
+    font-family: "Bona Nova SC", serif;
+    margin-top: 2%;
+    margin-right: 72%;
+    margin-left: 4%;
+    color: #121212;
+    font-size: 20px;
+    background-color: rgba(201, 221, 220, 0.416);
+    padding-right: 2%;
+    border-radius: 6px;
+}
+
+.back:hover {
+    background-color: rgba(201, 221, 220, 0.6); /* осветление фона при наведении */
+}
+
+.photo-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+h1 {
+    font-family: "Bona Nova SC", serif;
+    color: #121212;
+    font-size: 40px;
+    margin-top: 5%;
+    text-align: center;
+    background-color: rgba(81, 174, 200, 0.153);
+    margin-left: 12%;
+    margin-right: 12%;
+    border-radius: 30px;
+}
+
+.photo-container img {
+    width: 300px;
+    margin-top: 10%;
+    margin-left: 30%;
+    justify-content: space-between;
+    border-radius: 6px;
+    margin-bottom: 5%;
+}
+
+h2 {
+    font-family: "Kurale", sans-serif;
+    margin-left: 27%;
+    margin-top: 5%;
+}
+
+@keyframes wave { /*анімка руху*/
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, -10px);
+    }
+    50% {
+        transform: translate(0, -20px);
+    }
+    75% {
+        transform: translate(-10px, -10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes gradientShift { /*анімка фону*/
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.photo-container img, .photo-container h2 {
+    animation: wave 5s infinite;
+}
+
+.photo-container img:nth-child(odd), .photo-container h2:nth-child(odd) {
+    animation-duration: 6s;
+}
+
+.photo-container img:nth-child(even), .photo-container h2:nth-child(even) {
+    animation-duration: 4s;
+}
+
+.to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    animation: swing 2s infinite;
+}
+
+.to-top img {
+    margin-bottom: 5%;
+    margin-right: 5%;
+    width: 100%;
+    height: auto;
+}
+
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}

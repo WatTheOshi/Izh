@@ -3,13 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Факти</title>
+    <link rel="stylesheet" href="t3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kurale&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet"> <!--Підключення шрифтів-->
 </head>
 <body>
-<div>
-    <a href="../Їж.html">
-    <img src="test3.png">
-</a>
-</div>
+    <div>
+        <a class="back" href="../Їж.html" style="text-decoration: none;">
+            <img src="logo_back.png">
+            <h1>На головну</h1>
+        </a>
+    </div>
+
+    <div>
+        <h1 class="fac">Добірка фактів про Їжачків</h1>
+        <div class="row">
+            <h2 id="f1" onclick="openModal('modal1')">Малі Їжаки</h2> <!--openmodal вау робить модальне вікно оце неочікуванно-->
+            <h2 id="f2" onclick="openModal('modal2')">Хатки Їжаків</h2>
+            <h2 id="f3" onclick="openModal('modal3')">Сніданок Їжака</h2>
+        </div>
+        <div class="row">
+            <h2 id="f4" onclick="openModal('modal4')">Їжачки та Котики</h2>
+            <h2 id="f5" onclick="openModal('modal5')">Дивні звички</h2>
+            <h2 id="f6" onclick="openModal('modal6')">Зачіски Їжака</h2>
+        </div>
+    </div>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span> <!--А так нічого страшного &times для закриття вікна-->
+            <p>Дитинчата їжаків народжуються з м’якими колючками під шкірою, а другий комплект колючок з’являється через пару днів.</p>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <p>Їжаки сплять більшу частину дня під кущами та опалим листям у живоплоті, або, найчастіше, у норах, які вони риють під землею.</p>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <p>Їжаки не дуже примхливі, коли мова йде про їжу! Вони є всеїдними, що означає, що вони їдять і рослини, і комах.
+
+                Їжачки не переносять лактози! У них може боліти живіт від вживання молока.</p>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <p> Їжаки часто використовуються в котячих ласощах, оскільки їх вважають цінним джерелом протеїну і таурину.</p>
+        </div>
+    </div>
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <p>Коли їжак знаходить щось із сильним запахом (наприклад, нову їжу або навіть мило), він починає активно жувати це, а потім намазує сумішшю своєї слини свої голки. Вчені досі точно не знають, навіщо їжаки так роблять, але існує теорія, що це допомагає їм маскуватися або навіть виробляти отруту.</p>
+        </div>
+    </div>
+    <div id="modal6" class="modal"> 
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal6')">&times;</span> 
+            <p>Голки їжака складаються з кератину – того ж білка, що і волосся або нігті у людей. Кожен їжак має від 5 000 до 7 000 голок, і кожна з них випадає та відростає приблизно раз на рік.</p>
+        </div>
+    </div>
+
+    <script src="t3.js"></script> <!--Підключення джаваскрипта-->
 </body>
 </html>

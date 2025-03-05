@@ -1,0 +1,81 @@
+html {
+    scroll-behavior: smooth; 
+} 
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+    display: none !important;
+}
+
+body, html {
+    -ms-overflow-style: none !important;  
+    scrollbar-width: none !important;  
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.lava-lamp { /*на фон*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,0,0,0.5), rgba(255,255,0,0.5));
+    z-index: -1;
+    transition: background-position 0.5s ease;
+}
+
+@keyframes lavaLamp { /*його анімка */
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.back {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: "Bona Nova SC", serif;
+    margin-top: 2%;
+    margin-right: 70%;
+    margin-left: 3%;
+    color: #313030;
+    font-size: 20px;
+    background-color: rgba(255, 249, 245, 0.183);
+    border-radius: 25px;
+}
+
+.back:hover {
+    background-color: rgba(255, 249, 245, 0.3); /* осветление фона при наведении */
+}
+
+.back img {
+    margin-right: 10px;
+    max-width: 100px;
+}
+
+.content {
+    align-items: center;
+    height: 100%;
+    font-family: "Kurale", sans-serif;
+    color: #313030;
+    font-size: 18px;
+    width: 50%;
+    max-width: 666px;
+    margin: 0 auto;
+    text-align: center;
+    word-wrap: break-word;
+    background-color: rgba(240, 248, 255, 0.263);
+    border-radius: 25px;
+    margin-bottom: 4%;
+}

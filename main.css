@@ -2,44 +2,59 @@ body {
     margin: 0%;
     margin-bottom: auto;
     padding: 0%;
-    background-image: url(bg.png);
+    background-image: url(bg.png); /*настройка фону*/
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 html {
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth; /*плавне гортання сторінки*/
 } 
 
 footer { 
-    background-color: #686868;
+    background-color: #4a50478d;
     text-align: center;
     position: static;
     bottom: 0;
     width: 100%;
-    padding-bottom: 1%;
+    padding-bottom: 1%; /*настрйока футера*/
     padding-top: 1%;
     margin: 0%;
 }
 
 header {
-    background: linear-gradient(90deg, #226330, #278556, #12654a), 
-                linear-gradient(to bottom, rgba(255, 255, 255, 0.076) 0%, rgba(255, 255, 255, 0.091) 100%);
-    background-blend-mode: overlay;
+    display: flex;
+    font-family: "Shafarik", sans-serif;
+    justify-content: space-between;
+    text-align: center;
+    background: #9dd4b108;
+    background-blend-mode: overlay; /*настройка хедера*/
     color: #fff;
     font-size: 200%;
     text-align: center;
     position: static;
     bottom: 0;
     width: 100%;
-    padding-bottom: 2%;
+    padding-bottom: 0%;
     padding-top: 1%;
-    margin: 0%;
 }
 
+header a p {
+    background-color: rgba(106, 115, 92, 0.263); /*текст та посилання хедера*/
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    display: inline-block; 
+}
+
+header a p:hover {
+    background-color: rgba(106, 115, 92, 0.5); /* осветление фона при наведении */
+}
+
+.balanda a { color:rgb(255, 255, 255) } /*посилання*/
+
 @keyframes glow {
-    50% { text-shadow: 0 0 10px #098135, 0 0 20px #86a37e; }
+    50% { text-shadow: 0 0 10px #098135, 0 0 20px #86a37e; } /*анімація світіння*/
     100% { text-shadow: 0 0 5px #67ad73, 0 0 10px #3fe866; }
 }
 
@@ -50,14 +65,14 @@ h1 {
     text-align: center;
     color: #2bc626;
     animation: glow 2s infinite alternate;
-    background-color: rgba(115, 115, 115, 0.261);
+    background-color: rgba(163, 163, 163, 0.168); /*заголовок*/
     margin-left:24%;
     margin-right: 24%;
     border-radius: 20px;
 }
 
 .wiki {
-    background: linear-gradient( rgb(53, 65, 39), rgb(96, 127, 62));
+    background: linear-gradient( rgb(53, 65, 39), #51623f); /*рофл їж вікі*/
     font-family: "Jura", sans-serif;
     color:rgba(234, 244, 215, 0.872);
     font-size: 22px;
@@ -71,9 +86,9 @@ h1 {
 }
 
 .we {
-    background: linear-gradient( rgb(96, 127, 62), rgb(145, 187, 101), rgb(113, 137, 87));
+    background: linear-gradient( #51623f, rgb(90, 115, 63), rgb(53, 65, 39)); /*ми ля*/
     font-family: "Jura", sans-serif;
-    color: rgba(234, 244, 215, 0.872);
+    color: rgba(219, 248, 166, 0.872);
     font-size: 22px;
     background-color: rgba(236, 200, 129, 0.259);
     margin-left: 27%;
@@ -83,39 +98,26 @@ h1 {
     position: relative;
 }
 
-.we::before, .we::after, .wiki::before, .wiki::after {
+.we::before, .we::after, .wiki::before, .wiki::after { /*для отих зелених полосочок*/
     content: '';
     position: absolute;
-    width: 3px; /* Adjust the width of the line */
+    width: 3px; 
     height: 100%;
-    background-color: rgba(24, 138, 45, 0.56); /* Adjust the color of the line */
-    top: 0; /* Align the lines to the top */
+    background-color: rgba(70, 132, 81, 0.344); 
+    top: 0;
 }
 
 .we::before, .wiki::before {
-    left: -10px; /* Adjust the distance from the left side */
+    left: -10px; 
 }
 
 .we::after, .wiki::after {
-    right: -10px; /* Adjust the distance from the right side */
+    right: -10px; 
 }
 
-.gallery {
-    height: 150px;
-    width: 150px;
-}
-
-.galle {
-    margin-top: 4%;
-    margin-left: 20%;
-    margin-right: 20%;
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-}
 
 .hz {
-    background-color: yellowgreen;
+    background-color: yellowgreen; /*ото рофл ксюхи*/
     margin-left: 40%;
     margin-right: 40%;
     margin-top: 4%;
@@ -123,12 +125,12 @@ h1 {
     transition: opacity 0.5s ease;
 }
 
-.hz:hover {
+.hz:hover { /*прозорість рофла*/
     opacity: 1; 
 }
 
 .charity {
-    margin-left: 30%;
+    margin-left: 30%; /*на благодію*/
     margin-right: 30%;
     margin-top: 4%;
     margin-bottom: 4%;
@@ -138,7 +140,7 @@ h1 {
     text-align: center;
     font-family: "Oswald", sans-serif;
     font-size: 12px;
-    background: linear-gradient(135deg, rgba(245, 247, 250, 0.89), rgba(195, 207, 226, 0.822));
+    background: linear-gradient(135deg, rgba(245, 247, 250, 0.89), rgba(195, 207, 226, 0.822)); /*тибличка чаріті*/
     padding-top: -6%;
     border-radius: 10px;
     margin-left: 30%;
@@ -160,7 +162,7 @@ h1 {
     animation: shine 5s infinite;
 }
 
-@keyframes shine {
+@keyframes shine { /*анімаця мігання його*/
     0% {
         left: -50%;
         opacity: 0;
@@ -184,4 +186,27 @@ h1 {
 
 #charity p {
     margin: 0.5rem 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar, html::-webkit-scrollbar { /*щоб не було полоски прокрутки*/
+    display: none !important;
+}
+
+
+body, html {
+    -ms-overflow-style: none !important;  
+    scrollbar-width: none !important;  
 }

@@ -1,0 +1,125 @@
+html {
+    scroll-behavior: smooth; 
+} 
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+    display: none !important;
+}
+
+body, html {
+    -ms-overflow-style: none !important;  
+    scrollbar-width: none !important;  
+}
+
+.back {
+    display: flex;
+    align-items: center;
+}
+
+.back img {
+    margin-right: 10px;
+}
+
+.back {
+    font-family: "Bona Nova SC", serif;
+    margin-top: 4%;
+    margin-right: 70%;
+    margin-left: 9%;
+    color: #f9f4f4;
+    font-size: 20px;
+    background-color: rgba(137, 69, 33, 0.416);
+    padding-right: 2%;
+    border-radius: 6px;
+}
+
+.back:hover {
+    background-color: rgba(137, 69, 33, 0.6); /* осветление фона при наведении */
+}
+
+body {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-position-y: 20%;
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden; 
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+.fac {
+    text-align: center;
+    font-size: 40px;
+    font-family: "Yeseva One", sans-serif;
+    color: palevioletred;
+}
+
+.row { /*ряди кнопок*/
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.row h2 {
+    font-family: "kurale", sans-serif;
+    flex: 1;
+    text-align: center;
+    cursor: default; 
+    user-select: none; 
+    background-color: rgba(137, 69, 33, 0.416);
+    border-radius: 10px; 
+    padding: 2px;
+    margin-left: 8%;
+    margin-right: 8%;
+    color: ivory;
+}
+
+.row h2:hover {
+    background-color: rgba(137, 69, 33, 0.6); /* осветление фона при наведении */
+}
+
+.row:nth-child(2) h2 { /*кожне друге тойво*/
+    margin-top: 5%;
+}
+
+.modal { /*для вікон з фактами*/
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #e3c6b4;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
